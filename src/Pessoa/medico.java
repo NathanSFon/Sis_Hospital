@@ -4,8 +4,17 @@ public class medico extends pessoa{
     private String especializacao;
     private boolean atendimento;
 
+    public medico(String nome, int idade, double peso, double altura) {
+        super(nome, idade, peso, altura);
+    }
+
     public void consultando(){
         if (!atendimento){}
+    }
+
+    public void fimConsulta(String receita, Boolean atestado){
+        System.out.println("Remedio receitado: " + receita);
+        System.out.println("Precisa de atestado: " + atestado);
     }
 
     public String getEspecializacao() {
