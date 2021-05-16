@@ -1,6 +1,3 @@
-import Pessoa.medico;
-import Pessoa.paciente;
-
 public class Consulta {
     private medico med;
     private paciente pacien;
@@ -8,6 +5,13 @@ public class Consulta {
     public Consulta(medico medi, paciente pa){
         this.setMed(medi);
         this.setPacien(pa);
+        this.med.consultando();
+        this.med.fimConsulta();
+    }
+
+    @Override
+    public String toString() {
+        return "medico(a)" + this.med.getNome() + " paciente " + this.pacien.toString;
     }
 
     public medico getMed() {

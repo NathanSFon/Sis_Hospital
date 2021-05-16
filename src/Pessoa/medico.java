@@ -9,12 +9,15 @@ public class medico extends pessoa{
     }
 
     public void consultando(){
-        if (!atendimento){}
+        if (!atendimento){
+            this.setAtendimento(true);
+        }
     }
 
     public void fimConsulta(String receita, Boolean atestado){
         System.out.println("Remedio receitado: " + receita);
         System.out.println("Precisa de atestado: " + atestado);
+        setAtendimento(false);
     }
 
     public String getEspecializacao() {
